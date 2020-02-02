@@ -46,3 +46,5 @@ Ankh.NoLoad
 
 #Other
 .svn
+*.db
+appsettings.json
