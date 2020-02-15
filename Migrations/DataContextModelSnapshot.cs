@@ -67,7 +67,7 @@ namespace DateMatchApp.API.Migrations
 
                     b.Property<string>("Username");
 
-                    b.Property<string>("interest");
+                    b.Property<string>("Interest");
 
                     b.HasKey("Id");
 

@@ -131,7 +131,7 @@ namespace DateMatchApp.API.Migrations
                 table: "Users");
 
             migrationBuilder.DropColumn(
-                name: "interest",
+                name: "Interest",
                 table: "Users");
         }
     }
