@@ -1,8 +1,8 @@
 using System;
 
-namespace DateMatchApp.API.Models
+namespace DateMatchApp.API.DTO
 {
-    public class Photo
+    public class PhotosForReturnDto
     {
         public int id { get; set; }
         public string Url { get; set; }
@@ -10,7 +10,5 @@ namespace DateMatchApp.API.Models
         public DateTime DateAdded { get; set; }
         public bool IsMain { get; set; }
         public string PublicId { get; set; }
-        public User User { get; set; }
-        public int UserId { get; set; }
     }
 }
