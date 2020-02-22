@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using DateMatchApp.API.Models;
+using DatingApp.API.Helpers;
+using DatingApp.API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DateMatchApp.API.Data
@@ -46,6 +49,31 @@ namespace DateMatchApp.API.Data
         public async Task<bool> SaveAll()
         {
             return await _context.SaveChangesAsync() > 0;
+        }
+
+        public async Task<Photo> GetMainPhotoForUser(int userId)
+        {
+            return await _context.Photos.Where(u => u.UserId == userId).FirstOrDefaultAsync(p=>p.IsMain);
+        }
+
+        public Task<Like> GetLike(int userId, int recipientId)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<Message> GetMessage(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
